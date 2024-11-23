@@ -39,6 +39,6 @@ return {
             end,
         })
         -- Configure language servers here
-        require("lspconfig").lua_ls.setup()
+        require("lspconfig").lua_ls.setup({})
     end,
 }
