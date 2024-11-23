@@ -79,5 +79,7 @@ return {
         require("mini.completion").setup()
         -- Enable and configure comment
         require("mini.comment").setup()
+        -- Enable and configure move text with alt-{h,j,k,l}
+        require("mini.move").setup()
     end,
 }
