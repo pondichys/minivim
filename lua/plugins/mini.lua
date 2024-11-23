@@ -77,5 +77,7 @@ return {
         require("mini.extra").setup()
         -- Enable and configure completions
         require("mini.completion").setup()
+        -- Enable and configure comment
+        require("mini.comment").setup()
     end,
 }
