@@ -53,6 +53,8 @@ return {
         -- Enable and configure file explorer
         require("mini.files").setup()
         vim.keymap.set("n", "<leader>e", "<cmd>lua MiniFiles.open()<cr>", { desc = "File explorer" })
+        -- Enable and configure diffs
+        require("mini.diff").setup()
         -- Editor related modules
         -- Enable and configure auto-pairs
         require("mini.pairs").setup()
