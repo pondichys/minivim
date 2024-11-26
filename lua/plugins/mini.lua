@@ -30,7 +30,9 @@ return {
         -- Enable and configure indentation guidelines
         require("mini.indentscope").setup()
         -- Enable and configure nicer notifications
-        require("mini.notify").setup()
+        require("mini.notify").setup({
+            window = { config = { border = "double" } },
+        })
         -- Enable and configure telescope like picker
         local win_config = function()
             height = math.floor(0.618 * vim.o.lines)
