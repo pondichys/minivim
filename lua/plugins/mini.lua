@@ -10,6 +10,8 @@ return {
         require("mini.statusline").setup()
         -- Enable and configure tab line
         require("mini.tabline").setup()
+        -- Enable and configure starter screen
+        require("mini.starter").setup()
         -- Enable and configure keymap clues
         require("mini.clue").setup({
             triggers = {
