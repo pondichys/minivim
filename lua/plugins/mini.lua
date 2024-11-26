@@ -3,7 +3,7 @@ return {
     version = false,
     lazy = false,
     config = function()
-        -- UI related modules
+        -- {{{ UI related modules
         -- Enable icons
         require("mini.icons").setup()
         -- Configure statusline
@@ -72,7 +72,9 @@ return {
                 hex_color = require("mini.hipatterns").gen_highlighter.hex_color(),
             },
         })
-        -- Editor related modules
+        -- }}}
+        --
+        -- {{{ Editor related modules
         -- Enable and configure auto-pairs
         require("mini.pairs").setup()
         -- Enable and configure surrounds
@@ -85,5 +87,6 @@ return {
         require("mini.comment").setup()
         -- Enable and configure move text with alt-{h,j,k,l}
         require("mini.move").setup()
+        --- }}}
     end,
 }
