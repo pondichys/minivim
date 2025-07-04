@@ -37,8 +37,8 @@ return {
     })
     -- Enable and configure telescope like picker
     local win_config = function()
-      height = math.floor(0.618 * vim.o.lines)
-      width = math.floor(0.618 * vim.o.columns)
+      local height = math.floor(0.618 * vim.o.lines)
+      local width = math.floor(0.618 * vim.o.columns)
       return {
         anchor = 'NW',
         height = height,
@@ -52,10 +52,11 @@ return {
       options = { content_from_bottom = true },
       window = { config = win_config },
     })
-    vim.keymap.set('n', '<leader>fb', '<cmd>Pick buffers<cr>', { desc = 'Pick buffer' })
-    vim.keymap.set('n', '<leader>ff', '<cmd>Pick files<cr>', { desc = 'Pick file' })
+    vim.keymap.set('n', '<leader>fb', '<cmd>Pick buffers<cr>', { desc = 'Find buffer' })
+    vim.keymap.set('n', '<leader>fd', '<cmd>Pick diagnostics<cr>', { desc = 'Find diagnostics' })
+    vim.keymap.set('n', '<leader>ff', '<cmd>Pick files<cr>', { desc = 'Find file' })
     vim.keymap.set('n', '<leader>fg', '<cmd>Pick grep_live<cr>', { desc = 'Grep live pattern' })
-    vim.keymap.set('n', '<leader>fh', '<cmd>Pick help<cr>', { desc = 'Pick help' })
+    vim.keymap.set('n', '<leader>fh', '<cmd>Pick help<cr>', { desc = 'Search help' })
     -- Enable and configure file explorer
     require('mini.files').setup()
     vim.keymap.set('n', '<leader>e', '<cmd>lua MiniFiles.open()<cr>', { desc = 'File explorer' })
@@ -83,8 +84,6 @@ return {
     require('mini.surround').setup()
     -- Enable and configure extra pickers, a/i objects and highlighters
     require('mini.extra').setup()
-    -- Enable and configure completions
-    require('mini.completion').setup()
     -- Enable and configure comment
     require('mini.comment').setup()
     -- Enable and configure move text with alt-{h,j,k,l}
